@@ -4,7 +4,7 @@ Este documento descreve a **estrutura de abas do Excel** e o **prompt usado para
 
 ---
 
-## 1 Estrutura das abas do Excel
+##  Estrutura das abas do Excel
 
 ### Aba `vagas`
 ID, Empresa, Cargo, Modelo_Trab, Area_Atuacao, Data, Nível, Salario, Link_Vaga, Destaque, Localizacao, Tipo_Contratacao, Num_Candidatos, Idiomas, Beneficios, Departamento, Ferramentas_Específicas, Remoto, Categoria, Fonte_Vaga
@@ -14,7 +14,7 @@ Colunas:  Vaga_ID, Skill, Tipo, Nivel_Conhecimento, Obrigatoria, Categoria
 
 ---
 
-## 2 Critério de pesquisa no LinkedIn
+##  Critério de pesquisa no LinkedIn
 
 As vagas foram coletadas manualmente a partir do LinkedIn utilizando a seguinte **query de busca**:
 
@@ -23,7 +23,7 @@ As vagas foram coletadas manualmente a partir do LinkedIn utilizando a seguinte 
 
 ---
 
-## 3 Prompt para extrair dados do LinkedIn
+##  Prompt para extrair dados do LinkedIn
 
 ```
 Você vai receber a descrição completa de uma vaga de emprego.
