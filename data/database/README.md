@@ -1,1 +1,0 @@
-"# Pasta para o banco de dados SQLite" 
