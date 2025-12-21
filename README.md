@@ -25,6 +25,10 @@ Essa abordagem garantiu **eficiência e confiabilidade** para o pipeline subsequ
 
 ## 🛠️ Tecnologias e Ferramentas
 
+O fluxo do projeto segue:
+
+**Coleta** ![IA](https://img.shields.io/badge/IA-AI-blue) ⟶ **Visualização** ![Excel](https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoft-excel&logoColor=white) ⟶ **Limpeza** ![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python&logoColor=white) ⟶ **Análise** ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=mysql&logoColor=white) ⟶ **Apresentação** ![Power BI](https://img.shields.io/badge/Dashboard-F2C811?style=flat&logo=power-bi&logoColor=black) ⟶ **Documentação** ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
+
 | Etapa | Ferramenta | Função |
 |-------|------------|------|
 | Coleta & extração | IA via prompts | Extrai dados estruturados da vaga |
