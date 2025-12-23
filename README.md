@@ -9,17 +9,6 @@
 
 ---
 
-## 🎯 Objetivos
-- Coletar dados de vagas reais: empresa, cargo, localização, data, nível de senioridade e requisitos técnicos.  
-- Padronizar e estruturar dados textuais não estruturados (descrições de vagas).  
-- Identificar **skills mais demandadas** por área e nível (estágio, júnior, pleno, sênior).  
-- Analisar **diferenças e gaps de competências** entre níveis de senioridade.  
-- Comparar o mercado brasileiro com dados internacionais para identificar **tendências emergentes**.  
-- Criar dashboards interativos que apoiem **decisões de carreira e estudo**.  
-- Documentar todo o pipeline: **coleta → limpeza → análise → visualização**.
-
----
-
 ## 🔹 Coleta de Dados
 > **Desafio:** LinkedIn possui API fechada, impossibilitando a coleta automatizada de vagas diretamente via Python.
 
@@ -45,6 +34,17 @@ O fluxo do projeto segue:
 | Documentação | GitHub | Registro completo do projeto, metodologia e exemplos de dashboards |
 
 > 💡 Observação: Python permite **automatizar toda a cadeia de transformação**, tornando o fluxo de dados mais eficiente e escalável do que usar Excel para limpeza manual.
+
+---
+
+## 🎯 Objetivos
+- Coletar dados de vagas reais: empresa, cargo, localização, data, nível de senioridade e requisitos técnicos.  
+- Padronizar e estruturar dados textuais não estruturados (descrições de vagas).  
+- Identificar **skills mais demandadas** por área e nível (estágio, júnior, pleno, sênior).  
+- Analisar **diferenças e gaps de competências** entre níveis de senioridade.  
+- Comparar o mercado brasileiro com dados internacionais para identificar **tendências emergentes**.  
+- Criar dashboards interativos que apoiem **decisões de carreira e estudo**.  
+- Documentar todo o pipeline: **coleta → limpeza → análise → visualização**.
 
 ---
 
