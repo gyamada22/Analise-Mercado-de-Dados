@@ -1,4 +1,4 @@
-# Job Market Analysis — Análise de Requisitos de Vagas em Dados
+# Job Market Analysis 
 
 ## 🖥️ Descrição do Projeto
 Este projeto tem como objetivo analisar **vagas reais de emprego na área de dados**, coletadas a partir de plataformas de recrutamento (ex: LinkedIn), para extrair insights sobre **skills demandadas, tendências do mercado e gaps de competências**.
