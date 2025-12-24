@@ -2,9 +2,13 @@
 
 Este arquivo contém os dados coletados diretamente das plataformas de recrutamento (ex: LinkedIn), sem nenhum processamento ou padronização. Ele serve como **ponto de partida para toda a análise**, garantindo a preservação dos dados originais.
 
-## 🗂 Estrutura do Arquivo
+##  Método de Coleta (Contexto)
 
-O Excel possui **duas abas principais**: `vagas` e `skills`.
+Devido às limitações da API do LinkedIn, os dados foram coletados através de:
+1. **Busca manual** de vagas no LinkedIn
+2. **Extração estruturada** via prompts de IA (ChatGPT/Claude)
+3. **Consolidação manual** em Excel
+4. **Segmentação** em duas abas relacionadas (vagas ↔ skills)
 
 ---
 
