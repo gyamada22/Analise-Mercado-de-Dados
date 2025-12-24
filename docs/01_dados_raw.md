@@ -17,7 +17,9 @@ Este arquivo contém os dados coletados diretamente das plataformas de recrutame
 
 4. **Segmentação estratégica** em duas abas  
    - Separação intencional entre dados da vaga e skills  
-   - Facilita a análise relacional posterior
+   - Facilita a análise relacional posterior  
+   > Obs: A aba `vagas` funciona como **tabela fato**, enquanto a aba `skills` atua como **tabela de dimensões de skills**, permitindo análises relacionais e agregações por vaga ou skill.
+
 
 ---
 
