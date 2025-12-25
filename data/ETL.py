@@ -6,174 +6,160 @@ CONFIG = {
     'database': 'projeto_vagas',
     'table_vagas': 'Vagas',
     'table_skills': 'Skills',
-    'excel_origem': r'C:\MeusProjetos\projeto_vagas\Dados\Vagas_Coletadas.xlsx',
-    'excel_processado': r'C:\MeusProjetos\projeto_vagas\Dados\analise_vagas.xlsx'
+    'excel_origem': r'C:\MeusProjetos\projeto_vagas\Dados\Vagas_Coletadas_Raw.xlsx',
+    'excel_processado': r'C:\MeusProjetos\projeto_vagas\Dados\Vagas_Coletadas_Cleaned.xlsx'
 }
 
 
-def transformar_dados():
-    vagas = pd.read_excel(CONFIG['excel_origem'], sheet_name='Vagas')
-    skills = pd.read_excel(CONFIG['excel_origem'], sheet_name='Skills')
-    
-    def padronizar_cargo(cargo):
-        if pd.isna(cargo): 
-            return cargo
-        cargo_str = str(cargo).lower()
-        if 'alis' in cargo_str: 
-            return 'Analista de Dados'
-        elif 'enti' in cargo_str: 
-            return 'Cientista de Dados'
+
+# vamos padronizar 4 colunas #1 cargo , #2 localizacao , #3 requisito e #4 skill
+
+#1
+def padronizar_cargo(cargo):
+    if pd.isna(cargo): 
         return cargo
-    
-def transformar_dados():
-    vagas = pd.read_excel(CONFIG['excel_origem'], sheet_name='Vagas')
-    skills = pd.read_excel(CONFIG['excel_origem'], sheet_name='Skills')
-    
-    def padronizar_cargo(cargo):
-        if pd.isna(cargo): 
-            return cargo
-        cargo_str = str(cargo).lower()
-        if 'alis' in cargo_str: 
-            return 'Analista de Dados'
-        elif 'enti' in cargo_str: 
-            return 'Cientista de Dados'
-        return cargo
-    
-    def extrair_estado(local):
-        if pd.isna(local):
-            return local
-        
-        local_str = str(local).lower()
-        
-        mapeamento = {
-            'ão pau': 'São Paulo', 'barueri': 'São Paulo', 'campinas': 'São Paulo', 'sp': 'São Paulo',
-            'rio de jan': 'Rio de Janeiro', 'rj': 'Rio de Janeiro',
-            'minas': 'Minas Gerais', 'belo horizonte': 'Minas Gerais', 'mg': 'Minas Gerais',
-            'espírito': 'Espírito Santo', 'vitória': 'Espírito Santo', 'es': 'Espírito Santo',
-            'aran': 'Paraná', 'maringá': 'Paraná', 'pr': 'Paraná',
-            'santa cat': 'Santa Catarina', 'sc': 'Santa Catarina',
-            'rio grande': 'Rio Grande do Sul', 'porto alegre': 'Rio Grande do Sul', 'rs': 'Rio Grande do Sul',
-            'bahia': 'Bahia', 'salvador': 'Bahia', 'ba': 'Bahia',
-            'ceará': 'Ceará', 'fortaleza': 'Ceará', 'ce': 'Ceará',
-            'pernambuco': 'Pernambuco', 'recife': 'Pernambuco', 'pe': 'Pernambuco',
-            'paraíba': 'Paraíba', 'joão pessoa': 'Paraíba', 'pb': 'Paraíba',
-            'alagoas': 'Alagoas', 'maceió': 'Alagoas', 'al': 'Alagoas',
-            'sergipe': 'Sergipe', 'lagarto': 'Sergipe', 'se': 'Sergipe',
-            'piauí': 'Piauí', 'teresina': 'Piauí', 'pi': 'Piauí',
-            'maranhão': 'Maranhão', 'ma': 'Maranhão',
-            'goiás': 'Goiás', 'goiânia': 'Goiás', 'go': 'Goiás',
-            'distrito': 'Distrito Federal', 'brasília': 'Distrito Federal', 'df': 'Distrito Federal',
-            'mato grosso': 'Mato Grosso', 'mt': 'Mato Grosso',
-            'mato grosso do sul': 'Mato Grosso do Sul', 'dourados': 'Mato Grosso do Sul', 'ms': 'Mato Grosso do Sul',
-            'pará': 'Pará', 'belém': 'Pará', 'pa': 'Pará',
-            'amazonas': 'Amazonas', 'am': 'Amazonas',
-            'rondônia': 'Rondônia', 'ro': 'Rondônia',
-            'tocantins': 'Tocantins', 'to': 'Tocantins',
-            'roraima': 'Roraima', 'rr': 'Roraima',
-            'amapá': 'Amapá', 'ap': 'Amapá',
-            'acre': 'Acre', 'ac': 'Acre',
-            'remoto': 'Remoto', 'remote': 'Remoto'
-        }
-        
-        for parte, estado in mapeamento.items():
-            if parte in local_str:
-                return estado
-        
+    cargo_str = str(cargo).lower()
+    if 'nalis' in cargo_str: 
+        return 'Analista de Dados'
+    elif 'entis' in cargo_str: 
+        return 'Cientista de Dados'
+    return cargo
+
+#2
+def padronizar_estado(local):
+    if pd.isna(local):
         return local
-    
-    def classificar_requisito(valor):
-        if pd.isna(valor):
-            return "Não informado"
-        valor_str = str(valor).strip().lower()
-        if valor_str in ['básico', 'basico', 'sim', 'obrigatório', 'obrigatorio']:
-            return "Obrigatório"
-        elif valor_str in ['diferencial', 'não', 'nao', 'não obrigatório']:
-            return "Diferencial"
-        return valor_str.capitalize()
-    
-    def limpar_skill_agrupada(skill):
-        if pd.isna(skill):
-            return "Não informado"
-        skill_lower = str(skill).strip().lower()
-        mapeamento = {
-            'python': 'Python', 'sql': 'SQL', 'excel': 'Excel Avançado',
-            'power bi': 'Power BI', 'tableau': 'Tableau'
-        }
-        for term, padrao in mapeamento.items():
-            if term in skill_lower:
-                return padrao
-        return "Outra Skill"
-    
-    vagas['Cargo_Padronizado'] = vagas['Cargo'].apply(padronizar_cargo)
-    vagas['Estado'] = vagas['Localização'].apply(extrair_estado)
-    skills['Requisito'] = skills['Obrigatório/Diferencial'].apply(classificar_requisito)
-    skills['Skill_Agrupada'] = skills['Skill'].apply(limpar_skill_agrupada)
-    
-    df_vagas = vagas[['ID', 'Empresa', 'Setor', 'Modelo_Trabalho', 'Senioridade', 'Cargo_Padronizado', 'Estado']]
-    df_vagas = df_vagas.rename(columns={
-        'Modelo_Trabalho': 'Modalidade',
-        'Cargo_Padronizado': 'Cargo'
-    })
-    
-    df_skills = skills[['Vaga_ID', 'Skill_Agrupada', 'Requisito']].copy()
-    df_skills = df_skills.rename(columns={
-        'Vaga_ID': 'ID_Vaga',
-        'Skill_Agrupada': 'Skill'
-    })
-    
-    with pd.ExcelWriter(CONFIG['excel_processado'], engine='openpyxl') as writer:
-        df_vagas.to_excel(writer, sheet_name='Vagas', index=False)
-        df_skills.to_excel(writer, sheet_name='Skills', index=False)
-    
-    return df_vagas, df_skills
 
+    local_str = str(local).lower()
+    palavras = local_str.replace('-', ' ').replace('/', ' ').split()
 
-    
-    def classificar_requisito(valor):
-        if pd.isna(valor):
-            return "Não informado"
-        valor_str = str(valor).strip().lower()
-        if valor_str in ['básico', 'basico', 'sim', 'obrigatório', 'obrigatorio']:
-            return "Obrigatório"
-        elif valor_str in ['diferencial', 'não', 'nao', 'não obrigatório']:
-            return "Diferencial"
-        return valor_str.capitalize()
-    
-    def limpar_skill_agrupada(skill):
-        if pd.isna(skill):
-            return "Não informado"
-        skill_lower = str(skill).strip().lower()
-        mapeamento = {
-            'python': 'Python', 'sql': 'SQL', 'excel': 'Excel Avançado',
-            'power bi': 'Power BI', 'tableau': 'Tableau'
-        }
-        for term, padrao in mapeamento.items():
-            if term in skill_lower:
-                return padrao
-        return "Outra Skill"
-    
-    vagas['Cargo_Padronizado'] = vagas['Cargo'].apply(padronizar_cargo)
-    vagas['Estado'] = vagas['Localização'].apply(extrair_estado)
-    skills['Requisito'] = skills['Obrigatório/Diferencial'].apply(classificar_requisito)
-    skills['Skill_Agrupada'] = skills['Skill'].apply(limpar_skill_agrupada)
-    
-    df_vagas = vagas[['ID', 'Empresa', 'Setor', 'Modelo_Trabalho', 'Senioridade', 'Cargo_Padronizado', 'Estado']]
-    df_vagas = df_vagas.rename(columns={
-        'Modelo_Trabalho': 'Modalidade',
-        'Cargo_Padronizado': 'Cargo'
-    })
-    
-    df_skills = skills[['Vaga_ID', 'Skill_Agrupada', 'Requisito']].copy()
-    df_skills = df_skills.rename(columns={
-        'Vaga_ID': 'ID_Vaga',
-        'Skill_Agrupada': 'Skill'
-    })
-    
-    with pd.ExcelWriter(CONFIG['excel_processado'], engine='openpyxl') as writer:
-        df_vagas.to_excel(writer, sheet_name='Vagas', index=False)
-        df_skills.to_excel(writer, sheet_name='Skills', index=False)
-    
-    return df_vagas, df_skills
+    estados = {
+        'acre': 'Acre', 'ac': 'Acre',
+        'alagoas': 'Alagoas', 'al': 'Alagoas',
+        'amapá': 'Amapá', 'ap': 'Amapá',
+        'amazonas': 'Amazonas', 'am': 'Amazonas',
+        'bahia': 'Bahia', 'ba': 'Bahia',
+        'ceará': 'Ceará', 'ce': 'Ceará',
+        'distrito federal': 'Distrito Federal', 'df': 'Distrito Federal',
+        'espírito santo': 'Espírito Santo', 'es': 'Espírito Santo',
+        'goiás': 'Goiás', 'go': 'Goiás',
+        'maranhão': 'Maranhão', 'ma': 'Maranhão',
+        'mato grosso': 'Mato Grosso', 'mt': 'Mato Grosso',
+        'mato grosso do sul': 'Mato Grosso do Sul', 'ms': 'Mato Grosso do Sul',
+        'minas gerais': 'Minas Gerais', 'mg': 'Minas Gerais',
+        'pará': 'Pará', 'pa': 'Pará',
+        'paraíba': 'Paraíba', 'pb': 'Paraíba',
+        'paraná': 'Paraná', 'pr': 'Paraná',
+        'pernambuco': 'Pernambuco', 'pe': 'Pernambuco',
+        'piauí': 'Piauí', 'pi': 'Piauí',
+        'rio de janeiro': 'Rio de Janeiro', 'rj': 'Rio de Janeiro',
+        'rio grande do norte': 'Rio Grande do Norte', 'rn': 'Rio Grande do Norte',
+        'rio grande do sul': 'Rio Grande do Sul', 'rs': 'Rio Grande do Sul',
+        'rondônia': 'Rondônia', 'ro': 'Rondônia',
+        'roraima': 'Roraima', 'rr': 'Roraima',
+        'santa catarina': 'Santa Catarina', 'sc': 'Santa Catarina',
+        'são paulo': 'São Paulo', 'sp': 'São Paulo',
+        'sergipe': 'Sergipe', 'se': 'Sergipe',
+        'tocantins': 'Tocantins', 'to': 'Tocantins'
+    }
+
+    if 'remoto' in local_str or 'remote' in local_str:
+        return 'Remoto'
+
+    for palavra in palavras:
+        if palavra in estados:
+            return estados[palavra]
+
+    for chave, estado in estados.items():
+        if len(chave) > 2 and chave in local_str:
+            return estado
+
+    return 'Não identificado'
+
+#3
+def padronizar_requisito(valor):
+    if pd.isna(valor):
+        return "Não informado"
+
+    valor_str = str(valor).strip().lower()
+
+    obrigatorio = {'sim', 'obrigatório', 'obrigatorio'}
+    diferencial = {'não', 'nao', 'diferencial'}
+
+    if valor_str in obrigatorio:
+        return "Obrigatório"
+    elif valor_str in diferencial:
+        return "Diferencial"
+    else:
+        return "Não informado"
+
+#4
+def padronizar_skill(skill):
+    if pd.isna(skill):
+        return None
+
+    s = str(skill).strip().lower()
+
+    if 'python' in s:
+        return 'Python'
+
+    mapeamento = {
+        # Linguagens
+        'java': 'Java',
+        'sql': 'SQL',
+        ' r ': 'R',
+
+        # BI / Visualizaçao
+        'power bi': 'Power BI',
+        'tableau': 'Tableau',
+        'looker': 'Looker',
+        'qlik': 'Qlik',
+
+        # Excel
+        'excel': 'Excel Avançado',
+        'vba': 'Excel Avançado',
+        'power query': 'Excel Avançado',
+        'power pivot': 'Excel Avançado',
+
+        # Machine Learning / IA
+        'machine learning': 'Machine Learning',
+        'deep learning': 'Deep Learning',
+        'nlp': 'NLP',
+        'inteligência artificial': 'IA',
+        ' ia ': 'IA',
+
+        # Estatistica
+        'estatística': 'Estatística',
+        'probabilidade': 'Estatística',
+
+        # Engenharia de Dados
+        'etl': 'ETL',
+        'elt': 'ETL',
+        'airflow': 'ETL',
+        'dbt': 'ETL',
+
+        # Cloud
+        'aws': 'AWS',
+        'azure': 'Azure',
+        'gcp': 'GCP',
+    }
+
+    for termo, padrao in mapeamento.items():
+        if termo in f" {s} ":
+            return padrao
+
+    return 'Outras Skills'
+
+vagas = pd.read_excel(CONFIG['excel_origem'], sheet_name='Vagas')
+skills = pd.read_excel(CONFIG['excel_origem'], sheet_name='Skills')
+
+# padronizar colunas
+vagas['Cargo'] = vagas['Cargo'].apply(padronizar_cargo)
+vagas['Localizacao'] = vagas['Localização'].apply(padronizar_estado)  
+
+skills['Requisito'] = skills['Requisito'].apply(padronizar_requisito)
+skills['Skill'] = skills['Skill'].apply(padronizar_skill)
+
 
 
 def conectar_banco():
@@ -185,46 +171,55 @@ def conectar_banco():
     )
     return pyodbc.connect(conn_str)
 
-
 def importar_dados(conn, df_vagas, df_skills):
     cursor = conn.cursor()
     
+    # apagar os dados antigos
     cursor.execute(f"DELETE FROM {CONFIG['table_skills']}")
     cursor.execute(f"DELETE FROM {CONFIG['table_vagas']}")
     
     vagas_data = [
-        (row['ID'], row['Empresa'], row['Setor'], row['Modalidade'], 
-         row['Senioridade'], row['Cargo'], row['Estado'])
+        (
+            row['ID'], 
+            row['Empresa'], 
+            row['Setor'], 
+            row['Modalidade'], 
+            row['Senioridade'], 
+            row['Cargo'], 
+            row['Localizacao']  
+        )
         for _, row in df_vagas.iterrows()
     ]
     
     skills_data = [
-        (row['ID_Vaga'], row['Skill'], row['Requisito'])
+        (
+            row['Vaga_ID'], 
+            row['Skill'], 
+            row['Requisito']
+        )
         for _, row in df_skills.iterrows()
     ]
     
+    # inserçao no sql server
     cursor.executemany(f"""
         INSERT INTO {CONFIG['table_vagas']} 
-        (ID, Empresa, Setor, Modalidade, Senioridade, Cargo, Estado)
+        (ID, Empresa, Setor, Modalidade, Senioridade, Cargo, Localizacao)
         VALUES (?, ?, ?, ?, ?, ?, ?)
     """, vagas_data)
     
     cursor.executemany(f"""
         INSERT INTO {CONFIG['table_skills']} 
-        (ID_Vaga, Skill, Requisito)
+        (Vaga_ID, Skill, Requisito)
         VALUES (?, ?, ?)
     """, skills_data)
     
     conn.commit()
     cursor.close()
 
-
 def main():
-    df_vagas, df_skills = transformar_dados()
     conn = conectar_banco()
-    importar_dados(conn, df_vagas, df_skills)
+    importar_dados(conn, vagas, skills)
     conn.close()
-
 
 if __name__ == "__main__":
     main()
