@@ -56,7 +56,7 @@ Neste nível, o mercado prioriza a capacidade de **interpretar dados existentes*
 Diferenciais técnicos começam a surgir, mas ainda não são amplamente exigidos.
 
 <p align="center">
-  <img src="./docs/images/JUNIOR.png" width="100%">
+  <img src="./docs/images/JÚNIOR.png" width="100%">
 </p>
 
 ---
