@@ -5,24 +5,7 @@
 
 - A análise é inicialmente focada no **mercado brasileiro**, com posterior **comparação com dados internacionais**, visando identificar padrões globais e possíveis tendências que podem chegar ao Brasil no futuro.
 
-- O projeto transforma dados não estruturados em **insights analíticos e dashboards interativos**, documentando todo o pipeline de dados de forma clara e profissional.
-
----
-
-## 📂 Estrutura do Repositório
-
-<p align="left">
-  <img src="./docs/images/Repo_Structure.png" width="40%">
-</p>
-
----
-
-##  Coleta de Dados
-> **Desafio:** LinkedIn possui API fechada, impossibilitando a coleta automatizada de vagas diretamente via Python.
-
-> **Solução:** Para contornar, coletei os dados manualmente, visitando cada vaga e usando prompts de IA para extrair informações estruturadas (empresa, cargo, localização, data e skills).
-
-Essa abordagem garantiu **eficiência e confiabilidade** para o pipeline subsequente.
+- O projeto transforma dados não estruturados em **dashboards e insights analíticos**, documentando todo o pipeline de dados de forma clara e profissional.
 
 ---
 
@@ -43,6 +26,24 @@ O fluxo do projeto segue:
 
 > 💡 Observação: Python permite **automatizar toda a cadeia de transformação**, tornando o fluxo de dados mais eficiente e escalável do que usar Excel para limpeza manual.
 
+---
+
+## 📂 Estrutura do Repositório
+
+<p align="left">
+  <img src="./docs/images/Repo_Structure.png" width="40%">
+</p>
+
+---
+
+##  Coleta de Dados
+> **Desafio:** LinkedIn possui API fechada, impossibilitando a coleta automatizada de vagas diretamente via Python.
+
+> **Solução:** Para contornar, coletei os dados manualmente, visitando cada vaga e usando prompts de IA para extrair informações estruturadas (empresa, cargo, localização, data e skills).
+
+Essa abordagem garantiu **eficiência e confiabilidade** para o pipeline subsequente.
+
+---
 
 # 📊 Análise do Mercado de Dados — Evolução por Senioridade
 
