@@ -1,4 +1,4 @@
-# Análise do Mercado de Dados — Evolução por Senioridade
+# 📊 Análise do Mercado de Dados — Evolução por Senioridade
 
 > 📌 **Projeto de Análise do Mercado de Dados Brasileiro**  
 > Baseado em vagas reais, utilizando IA para classificar competências técnicas por senioridade e nível de exigência  
@@ -20,7 +20,7 @@ Esse crescimento torna **inviável** a gestão de dados por meio de soluções l
 
 > **Dados em escala só são viáveis quando armazenados, processados e orquestrados em ambientes distribuídos e baseados em nuvem.**
 
-Nesse contexto, tecnologias como **Cloud, Big Data, ETL e orquestração de pipelines** deixam de ser tendências e passam a ser **requisitos estruturais** do mercado de dados moderno.
+Nesse contexto, **Cloud deixa de ser uma tecnologia isolada** e passa a ser o **ambiente base** onde dados são gerados, armazenados e consumidos — impactando **todos os níveis de senioridade**, ainda que de formas diferentes.
 
 Este projeto parte dessa realidade global para analisar **como o mercado brasileiro traduz essa explosão de dados em exigências técnicas concretas**, segmentadas por nível de senioridade.
 
@@ -30,30 +30,30 @@ Este projeto parte dessa realidade global para analisar **como o mercado brasile
 
 O projeto mapeou o mercado de dados brasileiro a partir da extração e análise de vagas reais.
 
-As descrições textuais foram processadas com apoio de **Inteligência Artificial**, convertendo requisitos técnicos em métricas estruturadas, classificadas como:
+As descrições textuais foram processadas com apoio de **Inteligência Artificial**, convertendo requisitos técnicos em métricas estruturadas e normalizadas (ex.: AWS, Azure e GCP consolidados como **Cloud**), classificadas como:
 
 - **Obrigatório**
 - **Diferencial**
 
-Essa abordagem permite identificar **padrões de exigência técnica**, evidenciando como as expectativas do mercado evoluem conforme a senioridade do profissional.
+Essa abordagem permite identificar **padrões reais de exigência técnica**, evitando distorções por ferramentas específicas e evidenciando a **importância estrutural do Cloud ao longo da carreira**.
 
 ---
 
 ## 3. Evolução por Senioridade
 
-### Júnior (101 Vagas)
+### 🔹 Júnior (101 Vagas)
 
 **Visão Geral**  
 O nível Júnior está concentrado no **consumo e visualização de dados**, com foco em ferramentas de BI e análise básica.  
-A exigência por escala e arquitetura ainda é baixa, refletindo o papel operacional esperado nesse estágio da carreira.
+Mesmo nesse estágio, o Cloud já aparece como diferencial, refletindo que **os dados analisados já nascem majoritariamente em ambientes de nuvem**.
 
 **Principais Insights**
 - **Obrigatório:** Power BI (81,82%), Excel Avançado (59,60%) e SQL (55,56%)
-- **Diferencial:** Python (27,03%), Cloud e Tableau  (16,22%)
+- **Diferencial:** Python (27,03%), **Cloud** e Tableau (16,22%)
 
 **Leitura Técnica**  
-Neste nível, o mercado prioriza a capacidade de **interpretar dados existentes**, e não de construir infraestruturas complexas.  
-Diferenciais técnicos começam a surgir, mas ainda não são amplamente exigidos.
+O profissional Júnior ainda não é responsável pela infraestrutura, mas já precisa **consumir dados hospedados em Cloud**.  
+Isso explica a presença precoce do Cloud como diferencial, alinhada ao crescimento global do volume de dados.
 
 <p align="center">
   <img src="./docs/images/Junior.png" width="100%">
@@ -61,19 +61,19 @@ Diferenciais técnicos começam a surgir, mas ainda não são amplamente exigido
 
 ---
 
-### Pleno (137 Vagas)
+### 🔹 Pleno (137 Vagas)
 
 **Visão Geral**  
 O nível Pleno representa o **ponto de transição estrutural** entre análise e engenharia analítica.  
-À medida que o volume de dados cresce, o mercado passa a exigir profissionais capazes de **manipular, transformar e preparar dados em escala**.
+Com o aumento do volume e da complexidade dos dados, o mercado passa a exigir profissionais capazes de **transformar, integrar e preparar dados em ambientes distribuídos**.
 
 **Principais Insights**
 - **Obrigatório:** Power BI (82,84%), SQL (79,10%) e Python (62,69%)
-- **Diferenciais estratégicos:** ETL (20,75%), Cloud (16,98%) e Tableau (15,09%)
+- **Diferenciais estratégicos:** ETL (20,75%), **Cloud (16,98%)** e Tableau (15,09%)
 
 **Leitura Técnica**  
 Aqui, Python deixa de ser diferencial e passa a ser **fundamental**.  
-O profissional Pleno começa a atuar diretamente na **ponte entre dados brutos e consumo analítico**, refletindo a crescente complexidade dos ambientes de dados modernos.
+O Cloud ganha força como diferencial estratégico, pois o profissional Pleno começa a atuar diretamente na **ponte entre dados brutos armazenados em nuvem e consumo analítico**.
 
 <p align="center">
   <img src="./docs/images/Pleno.png" width="100%">
@@ -81,25 +81,26 @@ O profissional Pleno começa a atuar diretamente na **ponte entre dados brutos e
 
 ---
 
-### Sênior (64 Vagas)
+### 🔹 Sênior (64 Vagas)
 
 **Visão Geral**  
 No nível Sênior, o foco migra definitivamente da análise para **arquitetura, escala e governança de dados**.
 
-Esse movimento está diretamente ligado à explosão global do volume de dados, que exige soluções robustas, distribuídas e altamente confiáveis.
+Nesse estágio, o crescimento global de dados deixa de ser um contexto externo e passa a ser um **problema técnico direto**, exigindo soluções robustas e altamente confiáveis.
 
 **Principais Insights**
 - **Obrigatório:** Power BI (89,06%), SQL (84,38%) e Python (71,88%)
-- **Diferenciais dominantes:** Cloud (50,00%), Big Data (38,46%) e ETL (23,08%)
+- **Diferenciais dominantes:** **Cloud (50,00%)**, Big Data (38,46%) e ETL (23,08%)
 
 **Leitura Técnica**  
-A senioridade Sênior está associada à capacidade de **operar ambientes complexos em larga escala**, incluindo:
-- armazenamento distribuído
-- pipelines resilientes
-- processamento em tempo real ou quase real
-- governança e confiabilidade dos dados
+A senioridade Sênior está associada à capacidade de **projetar e operar ambientes de dados em larga escala**, incluindo:
 
-Cloud deixa de ser um diferencial técnico e passa a ser **infraestrutura básica** para atuar nesse nível.
+- Armazenamento distribuído em Cloud  
+- Pipelines resilientes  
+- Processamento em larga escala  
+- Governança, segurança e confiabilidade dos dados  
+
+Neste nível, **Cloud deixa de ser apenas diferencial técnico e se consolida como infraestrutura base**.
 
 <p align="center">
   <img src="./docs/images/Senior.png" width="100%">
@@ -112,54 +113,36 @@ Cloud deixa de ser um diferencial técnico e passa a ser **infraestrutura básic
 Embora o **Power BI** concentre o maior volume de exigências ao longo da carreira, o **Tableau** se destaca como um diferencial competitivo relevante.
 
 Seu pico ocorre no nível Pleno, onde:
-- é o **3º maior diferencial técnico (15,09%)**
-- alcança **18,66% de necessidade** quando ferramentas básicas (SQL, Excel e Power BI) são desconsideradas
+- É o **3º maior diferencial técnico (15,09%)**
+- Alcança **18,66% de necessidade** quando ferramentas básicas (SQL, Excel e Power BI) são desconsideradas
 
-Isso indica que o Tableau atua como um **marcador de especialização**, especialmente em contextos fora do ecossistema Microsoft e em ambientes analíticos mais avançados.
+Isso indica que o Tableau atua como um **marcador de especialização**, especialmente em ambientes analíticos mais avançados e fora do ecossistema Microsoft.
 
 ---
 
-## 5. Recomendações de Carreira (Pathing)
+## 5. Recomendações de Carreira
 
 - **Júnior:**  
-Foco em Power BI, SQL e Excel Avançado. Python e Tableau funcionam como diferenciais iniciais.
+  Foco em Power BI, SQL e Excel Avançado.  
+  Python, Tableau e **contato inicial com Cloud** funcionam como diferenciais importantes.
 
 - **Pleno:**  
-Consolidação de Python (Pandas, NumPy), ETL e SQL.  
-**Cloud (AWS/Azure) surge como diferencial estratégico**, refletindo a transição para ambientes de dados mais complexos, distribuídos e orientados à escala.
+  Consolidação de Python (Pandas, NumPy), ETL e SQL.  
+  **Cloud surge como diferencial estratégico**, refletindo a transição para ambientes de dados orientados à escala.
 
 - **Sênior:**  
-Atuação consolidada em **Cloud (AWS/Azure)** como infraestrutura base, com domínio de Big Data e orquestração de pipelines (ex.: Apache Airflow), assumindo responsabilidade pela **arquitetura, confiabilidade e escalabilidade** de dados em ambientes de larga escala.
-
-
-
----
-
-## 6. Implicações para Profissionais de Dados
-
-À medida que o volume global de dados cresce exponencialmente, o mercado passa a valorizar profissionais capazes de:
-
-- trabalhar com dados em grande escala
-- construir pipelines confiáveis e resilientes
-- operar ambientes distribuídos em nuvem
-- entregar dados prontos para consumo analítico e aplicações de IA
-
-Este projeto demonstra que essas exigências **já estão refletidas de forma concreta nas vagas do mercado brasileiro**.
+  Atuação consolidada em **Cloud como infraestrutura base**, com domínio de Big Data e orquestração de pipelines  
+  (ex.: Apache Airflow), assumindo responsabilidade por **arquitetura, confiabilidade e escalabilidade**.
 
 ---
 
-## 7. Conclusão
+## 6. Conclusão
 
-A análise evidencia uma progressão clara e estrutural no mercado de dados.
+A análise evidencia que o crescimento exponencial do volume de dados impacta **todas as etapas da carreira em dados**.
 
-O profissional evolui de um perfil focado em **consumo e visualização de dados** (Júnior) para um papel voltado à **engenharia, arquitetura e governança** (Sênior).
+O Cloud não surge apenas como uma especialização tardia, mas como **fundamento estrutural** do ecossistema moderno de dados — aparecendo desde o nível Júnior como diferencial e se consolidando como **infraestrutura essencial no nível Sênior**.
 
-Essa evolução não ocorre por tendência ou modismo, mas como resposta direta à **explosão global do volume de dados**, impulsionada por cloud computing, IA, IoT e sistemas digitais em larga escala.
-
-Nesse cenário, competências como **Cloud, ETL e Big Data** deixam de ser diferenciais e tornam-se **requisitos fundamentais** para operar em um mercado orientado por dados em escala.
-
-O Tableau surge como um diferencial estratégico intermediário, enquanto Cloud consolida-se como o pilar técnico que separa análise de dados de engenharia de dados.
-
+Este projeto oferece uma visão prática e orientada ao mercado para profissionais que desejam **planejar sua evolução técnica de forma estratégica e alinhada à realidade atual**.
 
 
 
