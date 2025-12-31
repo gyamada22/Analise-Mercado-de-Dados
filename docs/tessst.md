@@ -1,4 +1,4 @@
-# 📊 Análise do Mercado de Dados: Resumo do Projeto
+#  Análise do Mercado de Dados: Resumo do Projeto
 
 ---
 
