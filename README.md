@@ -76,8 +76,8 @@ O foco no nível Sênior migra da análise para arquitetura, escala e governanç
 Embora o **Power BI** concentre o maior volume de exigências ao longo da carreira, o **Tableau** surge como o principal diferencial competitivo.
 
 Seu pico ocorre no nível Pleno, onde:
-- é o **3º maior diferencial técnico (7,21%)**
-- atinge **10,73% de obrigatoriedade técnica** quando ferramentas básicas são desconsideradas
+- é o **3º maior diferencial técnico (15,09%)**
+- atinge **18,66% de obrigatoriedade técnica** quando ferramentas básicas(SQL, Excel e Power BI) são desconsideradas
 
 Isso indica que o Tableau funciona como um **marcador de especialização**, especialmente fora do ecossistema Microsoft.
 
