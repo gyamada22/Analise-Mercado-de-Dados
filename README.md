@@ -45,7 +45,7 @@ O fluxo do projeto segue:
 
 ---
 
-# 📊 Análise do Mercado de Dados — Evolução por Senioridade
+# 📊 Evolução do Mercado por Senioridade
 
 ## 1. Contexto Global: A Explosão de Dados
 
