@@ -21,10 +21,10 @@ Essa abordagem permite identificar padrões de exigência técnica ao longo da p
 
 ### 🟢 Júnior (101 Vagas)
 
-**Resumo Executivo:**  
+**Visão Geral:**  
 O nível Júnior é dominado por ferramentas de BI e análise básica. Diferenciais técnicos ainda não são amplamente exigidos, mas já criam vantagem competitiva.
 
-**Principais achados:**
+**Principais Insights**
 - **Obrigatório:** Power BI (27,36%), Excel Avançado (20,27%) e SQL (18,58%)
 - **Diferencial:** Bibliotecas Python (8,85%) e Tableau (5,31%)
 - **Leitura estratégica:** Python começa a separar candidatos já no início da carreira
@@ -39,10 +39,10 @@ O nível Júnior é dominado por ferramentas de BI e análise básica. Diferenci
 
 ### 🟡 Pleno (137 Vagas)
 
-**Resumo Executivo:**  
+**Visão Geral:**  
 No nível Pleno ocorre a transição crítica de BI para engenharia analítica. Python deixa de ser diferencial e passa a ser um pilar técnico.
 
-**Principais achados:**
+**Principais Insights**
 - **Obrigatório:** Power BI (37,50%), SQL (35,81%) e Python (28,38%)
 - **Diferencial estratégico:** Tableau (7,21%)
 - **Mudança estrutural:** ETL e Machine Learning surgem como exigências recorrentes (9,91%)
@@ -56,10 +56,10 @@ No nível Pleno ocorre a transição crítica de BI para engenharia analítica. 
 
 ### 🔵 Sênior (64 Vagas)
 
-**Resumo Executivo:**  
+**Visão Geral:**  
 O foco no nível Sênior migra da análise para arquitetura, escala e governança de dados.
 
-**Principais achados:**
+**Principais Insights**
 - **Obrigatório:** SQL (18,24%), Python (15,54%) e ETL (12,50%)
 - **Diferencial dominante:** AWS (10,34%) e Big Data (9,48%)
 - **Leitura técnica:** Senioridade está associada à capacidade de orquestrar pipelines e ambientes complexos
