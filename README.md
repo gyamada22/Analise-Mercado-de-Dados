@@ -12,7 +12,7 @@
 ## 📂 Estrutura do Repositório
 
 <p align="left">
-  <img src="./docs/images/Rep_Structure.png" width="40%">
+  <img src="./docs/images/Repo_Structure.png" width="40%">
 </p>
 
 
