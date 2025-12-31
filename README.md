@@ -30,8 +30,10 @@ O nível Júnior é dominado por ferramentas de BI e análise básica. Diferenci
 - **Leitura estratégica:** Python começa a separar candidatos já no início da carreira
 
 <p align="center">
-  <img src="../images/junior_project.png" width="700">
+  <img src="./docs/images/junior_project.png" width="650">
 </p>
+
+
 
 ---
 
@@ -46,8 +48,9 @@ No nível Pleno ocorre a transição crítica de BI para engenharia analítica. 
 - **Mudança estrutural:** ETL e Machine Learning surgem como exigências recorrentes (9,91%)
 
 <p align="center">
-  <img src="../images/pleno_project.png" width="700">
+  <img src="./docs/images/pleno_project.png" width="650">
 </p>
+
 
 ---
 
@@ -62,8 +65,9 @@ O foco no nível Sênior migra da análise para arquitetura, escala e governanç
 - **Leitura técnica:** Senioridade está associada à capacidade de orquestrar pipelines e ambientes complexos
 
 <p align="center">
-  <img src="../images/senior_project.png" width="700">
+  <img src="./docs/images/senior_project.png" width="650">
 </p>
+
 
 ---
 
