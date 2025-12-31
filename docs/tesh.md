@@ -1,36 +1,36 @@
-2. Dashboard de Skills Mais Demandadas
-Top skills obrigatórias vs. diferenciais
+# Job Market Analysis 
 
-Skills por cargo (Analista vs. Cientista de Dados)
+## 🖥️ Descrição do Projeto
+- Este projeto tem como objetivo analisar **vagas reais de emprego na área de dados**, coletadas a partir de plataformas de recrutamento (ex: LinkedIn), para extrair insights sobre **skills demandadas, tendências do mercado e gaps de competências**.
 
-Skills por senioridade (Júnior, Pleno, Sênior)
+- A análise é inicialmente focada no **mercado brasileiro**, com posterior **comparação com dados internacionais**, visando identificar padrões globais e possíveis tendências que podem chegar ao Brasil no futuro.
 
-Heatmap de skills por setor (ex: Finanças demanda mais SQL, Tecnologia mais Python/ML)
+- O projeto transforma dados não estruturados em **insights analíticos e dashboards interativos**, documentando todo o pipeline de dados de forma clara e profissional.
 
-5. Dashboard de Senioridade e Experiência
-Distribuição de vagas por nível (Júnior, Pleno, Sênior)
+---
 
-Skills mais exigidas por nível
+## 🔹 Coleta de Dados
+> **Desafio:** LinkedIn possui API fechada, impossibilitando a coleta automatizada de vagas diretamente via Python.
 
-Setores que mais contratam Júnior vs. Sênior
+> **Solução:** Para contornar, coletei os dados manualmente, visitando cada vaga e usando prompts de IA para extrair informações estruturadas (empresa, cargo, localização, data e skills).
 
-Modalidade preferida por nível de experiência
-7. Dashboard de Tech Stack por Vaga
-Combinações mais comuns de skills (ex: SQL + Python + Power BI)
+Essa abordagem garantiu **eficiência e confiabilidade** para o pipeline subsequente.
 
-8. Dashboard Interativo para Candidatos
-Filtros dinâmicos: Cargo, Estado, Modalidade, Senioridade, Skills
+---
 
-Lista de vagas com detalhes (empresa, local, skills)
+## 🛠️ Tecnologias e Ferramentas
 
-Recomendação de skills baseado no perfil selecionado
+O fluxo do projeto segue:
 
-Comparação de vagas lado a lado
+**Coleta** ![IA](https://img.shields.io/badge/IA-AI-blue) ⟶ **Visualização** ![Excel](https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoft-excel&logoColor=white) ⟶ **Limpeza** ![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python&logoColor=white) ⟶ **Análise** ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=mysql&logoColor=white) ⟶ **Apresentação** ![Power BI](https://img.shields.io/badge/Dashboard-F2C811?style=flat&logo=power-bi&logoColor=black) ⟶ **Documentação** ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
 
-10. Dashboard de Insights para Treinamento/Cursos
-Skills gap: diferença entre skills obrigatórias e diferenciais
+| Etapa | Ferramenta | Função |
+|-------|------------|------|
+| Coleta & extração | IA via prompts | Extrai dados estruturados da vaga |
+| Visualização inicial | Excel | Conferência e revisão rápida. Arquivo: **[Raw Data](https://raw.githubusercontent.com/gyamada22/Job-Market-Analysis/main/data/Vagas_Coletadas_Raw.xlsx)** |
+| Limpeza e padronização | Python | Padroniza dados, corrige inconsistências e gera Excel/SQL. Arquivo: **[Cleaned Data](https://raw.githubusercontent.com/gyamada22/Job-Market-Analysis/main/data/Vagas_Coletadas_Cleaned.xlsx)**, Script: **[ETL.py](https://github.com/gyamada22/Job-Market-Analysis/blob/main/data/ETL.py)** |
+| Modelagem e análise | SQL | Criação de tabelas, views e queries analíticas *(em desenvolvimento)* |
+| Dashboards | Power BI | Visualização interativa, insights e storytelling |
+| Documentação | GitHub | Registro completo do projeto, metodologia e exemplos de dashboards |
 
-Trend de tecnologias emergentes (ML, IA, Big Data, NLP)
-
-Recomendação de capacitação por perfil (ex: Júnior foca em SQL + Power BI)
-
+> 💡 Observação: Python permite **automatizar toda a cadeia de transformação**, tornando o fluxo de dados mais eficiente e escalável do que usar Excel para limpeza manual.
