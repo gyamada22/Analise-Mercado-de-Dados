@@ -9,6 +9,15 @@
 
 ---
 
+##  Coleta de Dados
+> **Desafio:** LinkedIn possui API fechada, impossibilitando a coleta automatizada de vagas diretamente via Python.
+
+> **Solução:** Para contornar, coletei os dados manualmente, visitando cada vaga e usando prompts de IA para extrair informações estruturadas (empresa, cargo, localização, data e skills).
+
+Essa abordagem garantiu **eficiência e confiabilidade** para o pipeline subsequente.
+
+---
+
 ##  Tecnologias e Ferramentas
 
 O fluxo do projeto segue:
@@ -33,15 +42,6 @@ O fluxo do projeto segue:
 <p align="left">
   <img src="./docs/images/Repo_Structure.png" width="40%">
 </p>
-
----
-
-##  Coleta de Dados
-> **Desafio:** LinkedIn possui API fechada, impossibilitando a coleta automatizada de vagas diretamente via Python.
-
-> **Solução:** Para contornar, coletei os dados manualmente, visitando cada vaga e usando prompts de IA para extrair informações estruturadas (empresa, cargo, localização, data e skills).
-
-Essa abordagem garantiu **eficiência e confiabilidade** para o pipeline subsequente.
 
 ---
 
