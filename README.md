@@ -75,9 +75,7 @@ O nível Pleno representa o **ponto de transição estrutural** entre análise e
 Aqui, Python deixa de ser diferencial e passa a ser **fundamental**.  
 O profissional Pleno começa a atuar diretamente na **ponte entre dados brutos e consumo analítico**, refletindo a crescente complexidade dos ambientes de dados modernos.
 
-<p align="center">
-  <img src="./docs/images/PLENO.png" width="100%">
-</p>
+
 
 ---
 
@@ -101,9 +99,7 @@ A senioridade Sênior está associada à capacidade de **operar ambientes comple
 
 Cloud deixa de ser um diferencial técnico e passa a ser **infraestrutura básica** para atuar nesse nível.
 
-<p align="center">
-  <img src="./docs/images/SÊNIOR.png" width="100%">
-</p>
+
 
 ---
 
