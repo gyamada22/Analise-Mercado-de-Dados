@@ -18,7 +18,7 @@ O script `etl.py` é responsável por **limpar, padronizar e carregar os dados d
 3. **Geração de Arquivo Processado**
    - Cria `Vagas_Coletadas_Cleaned.xlsx` com duas abas: `Vagas` e `Skills`.
 
-4. **Carga no Banco SQL Server**
+4. **Carrega no Banco SQL Server**
    - Conecta ao banco `projeto_vagas` via ODBC
    - Atualiza as tabelas `Vagas` e `Skills` apagando dados antigos e inserindo os novos.
 
