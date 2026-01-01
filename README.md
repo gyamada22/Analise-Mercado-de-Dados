@@ -7,6 +7,10 @@
 
 - O projeto transforma dados não estruturados em **dashboards e insights analíticos**, documentando todo o pipeline de dados de forma clara e profissional.
 
+Inicialmente, o pipeline utilizava um banco de dados local (SQL Server via SSMS) para armazenamento dos dados tratados após o ETL em Python. 
+Com a evolução do projeto, a arquitetura foi modernizada para um **Data Warehouse em nuvem (Snowflake)**, incorporando **dbt para modelagem analítica** e **Docker para padronização e execução do ambiente**, aproximando o fluxo da realidade de pipelines profissionais.
+
+
 ---
 
 ##  Coleta de Dados
