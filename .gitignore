@@ -4,6 +4,8 @@ logs/
 analyses/
 macros/
 snapshots/
+seeds/
+tests/
 
 # seguranca
 .env
